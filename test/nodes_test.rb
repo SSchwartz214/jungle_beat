@@ -14,25 +14,9 @@ class NodeTest < Minitest::Test
     assert_equal "plop", node.data
   end
 
-  def test_next_node_is_nil
-    node = Node.new("plop", nil)
-    assert_equal nil, node.next_node
+  def test_link_is_nil
+    node = Node.new("plop")
+    assert_nil node.pointer
   end
 
-
-
-
-
-
-  #   def test_node
-  #     node = Node.new("plop")
-  #
-  #     assert_equal "plop", node.data
-  #   end
-  #
-  #   def test_next_node
-  #     node = Node.new("plop")
-  #
-  #     assert_nil node.next_node
-  #   end
  end
