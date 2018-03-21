@@ -1,17 +1,22 @@
+require_relative "node"
+
 class LinkedList
-  attr_reader :list
+  attr_reader :head
+
 
   def initialize
-    @list = list
+    @head = nil
   end
 
-  def head
-    @list
-  end
-
-  def append(beat)
-    @list = list
-
-
+  def append(data)
+    if @head == nil
+       @head = Node.new(data)
+    else
+      current_node = @head
+      until current_node.next_node.nil?
+            current_node = current_node.next_node
+      end
+      current_node.next_node = Node.new(data)
+    end
   end
 end
