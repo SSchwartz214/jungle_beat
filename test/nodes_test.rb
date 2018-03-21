@@ -16,7 +16,7 @@ class NodeTest < Minitest::Test
 
   def test_link_is_nil
     node = Node.new("plop")
-    assert_nil node.pointer
+    assert_nil node.next_node
   end
 
  end
